@@ -1,0 +1,123 @@
+.login-page {
+    width: 100vw;
+    height: 100vh;
+
+    .container {
+        width: 90%;
+        margin: auto;
+
+        .main-logo {
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+        }
+    
+        .login-card {
+            margin: auto;
+            border:  1px solid #c0c0c0;
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 4px;
+
+            .login-title {
+                margin: 10px;
+                font-size: 2em;
+            }
+
+            .login-form {
+                .form-group {
+                    margin: 10px;
+                    .label {
+                        margin: 5px 0;
+                        font-size: 0.8em;
+                        font-weight: 600;
+                    }
+                    .forgot-pw {
+                        margin: 5px 0;
+                        color: $color-blue;
+                        font-size: 0.8em;
+                    }
+                    .forgot-pw:hover {
+                        color: $color-orange;
+                        text-decoration: underline;
+                    }
+                    input {
+                        width: 100%;
+                        padding: 10px;
+                        height: 30px;
+                    }
+                    input:focus{
+                        border: none;
+                        box-shadow: 0px 0px 1.5px 1.5px $color-orange;
+                        outline:0;
+                      }
+                }
+
+                .check-group {
+                    display: flex;
+                    gap: 5px;
+                    margin: 5px 10px;
+                    font-size: 0.8em;
+                }
+                
+                .login-btn {
+                    width: 95%;
+                    height: 30px;
+                    margin: 15px 10px;
+                    padding: 5px;
+                    background: linear-gradient(#F7DEA1, #F0C14D);
+                    border: 0.5px solid #aaaaaa;
+                    border-radius:3px;
+                }
+
+                .login-btn:hover {
+                    background: linear-gradient(#F5D68A, #EEBA36);
+                }
+
+                .label-group {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .new-account{
+                color: rgb(134, 134, 134);
+                font-weight: normal;
+                letter-spacing: 1px;
+                font-size: 11.5px;
+                width: 315px;
+                text-align: center;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                line-height: 0.1em;
+                margin: 10px 20px;
+                margin-top: 50px;
+
+                .new-account-text {
+                    background-color: #ffffff;
+                    padding: 8px;
+                }
+            }
+               
+            .create-btn{
+                background: linear-gradient(#f6f7f9, #e7e9ec);
+                width: 95%;
+                height: 30px;
+                margin: 20px 10px;
+                padding: 5px;
+                font-size:14px;
+                border: 0.5px solid #aaaaaa;
+                border-radius:3px;    
+            }
+            
+            .create-btn:hover{
+                background: linear-gradient(#f5f6f8, #d9dce1);
+              }
+            
+        }
+    
+    }
+
+}

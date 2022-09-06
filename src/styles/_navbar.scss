@@ -1,0 +1,33 @@
+.navbar{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 54px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .nav-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        .nav-left{
+            align-items: center;
+            display: flex;
+            gap: 1em;
+        }
+
+        .nav-right{
+            .nav-right-items{
+                align-items: center;  
+                display: flex;
+                gap: 1em;
+            }
+        }
+
+    }
+    
+}

@@ -1,37 +1,34 @@
 import { useRef } from "react"
-import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router"
-import { loginAction } from '../redux/actions/authActions' 
 
-const Login = () => {
+const Login = ({state, dispatch}) => {
 
-    const dispatch = useDispatch()
     const navigate = useNavigate()
     const emailRef = useRef()
     const passwordRef = useRef()
+
   
-    const auth = useSelector(state => state.auth)
-    console.log(auth)
-  
+
     const handleSubmit = e => {
-      e.preventDefault()
-      console.log("submitted")
-      const email= emailRef.current.value
-      const password = passwordRef.current.value
-      if(email==='test' && password==='test'){
-        dispatch(loginAction())
-        navigate('/', { replace: false })
-      }else{
-        console.log("BAD")
-      }
+        e.preventDefault()
+        console.log("submitted")
+        const email = emailRef.current.value
+        const password = passwordRef.current.value
+        if (email === 'test' && password === 'test') {
+            dispatch({type:'LOGIN'})
+            navigate('/', { replace: false })
+        } else {
+            console.log("BAD")
+        }
     }
+
 
     return (
         <>
             <div className="login-page">
                 <div className="container">
                     <div className="main-logo">
-                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png" alt="IMDb.com logo" />
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/imdb/authportal/images/www_imdb_logo._CB667618033_.png" alt="IMDb.com logo" />
                     </div>
                     <div className="login-card">
                         <span className="login-title">Sign in</span>

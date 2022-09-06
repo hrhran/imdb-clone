@@ -1,0 +1,160 @@
+.home-page {
+    width: 100vw;
+    min-height: calc(100vh - 54px);
+    background-color: #E3E2DC;
+
+    .container {
+        display: flex;
+        margin: auto;
+        width: 70%;
+        min-height: calc(100vh - 54px);
+
+        .main-section {
+            width: 75%;
+            padding: 20px;
+            border: 1px solid #c0c0c0;
+            background-color: #F8F8F8;
+            .title-space {
+                margin-bottom: 10px;
+                color: #424242;
+                .heading {
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                }
+                .sub-heading {
+                    font-size: 1.5em;
+                }
+                .sub-title {
+                    color: #666666;
+                    font-size: 0.8em;  
+                    margin: 15px 0;
+                }
+                hr {
+                    display: block; 
+                    height: 1px;
+                    border: 0;
+                    border-top: 1px solid #ccc;
+                    margin: 1em 0; 
+                    padding: 0;
+                }
+            }
+
+            .filters {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 25px;
+
+                input {
+                    width: 240px;
+                    height: 30px;
+                }
+
+                .sort-group {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    select {
+                        height: 30px;
+                    }
+
+                    .arrow-up {
+                        width: 0; 
+                        height: 0; 
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-top: 10px solid #292929;
+                        // transform: rotate(180deg);
+                      }
+                }
+
+                .per-group {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    .per-title {
+                        font-size: 0.85em;
+                    }
+                    input {
+                        width: 30px;
+                        height: 30px;
+                        padding: 5px;
+                    }
+                }
+
+            }
+            .table-space {
+                .main-table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                    font-size: 0.9em;
+                    thead{
+                        color: rgb(131, 131, 131);
+                        text-align: left;
+                        th{
+                            padding: 10px;
+                        }
+                    }
+                    .main-row {
+                        border-bottom: 1px solid #ffffff;
+                    }
+                    .main-row:nth-child(odd) {
+                        background-color: #f2f2f2;
+                    }
+                    td {
+                          text-align: left;
+                    }
+                    .table-img{
+                        width: 45px;
+                    }
+
+                    .rating {
+                        width: 20px;
+                        transform: translate(-20%,15%)
+                    }
+                }                  
+            }
+            .pages {
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                margin: 10px;
+                .page {
+                    padding: 5px;
+                }
+            }
+        }
+
+        .sidebar {
+            width: 25%;
+            padding: 15px;
+            padding-top: 125px;
+            background-color: #F0F0F0;
+            border-left: 3px solid #9d9d9d;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .sidebar-title {
+                font-size: 1.1em;
+                // padding: 10px;
+            }
+
+            .genres {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .container {
+      width: 100% !important;
+    }
+  }

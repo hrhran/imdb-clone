@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <>
-    {console.log("RENDERED")}
+    {console.log("RENDERED NAVBAR")}
         <div className='navbar'>
             <div className='nav-container'>
                 <div className='nav-left'>

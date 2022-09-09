@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import Login from './Login'
+import Login from './Login/Login'
 import Home from './Home'
 import Layout from './Layout'
 

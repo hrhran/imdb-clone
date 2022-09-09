@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import { useNavigate } from "react-router"
+import LoginInput from "./LoginInput"
 
 const Login = ({state, dispatch}) => {
 
@@ -7,17 +8,17 @@ const Login = ({state, dispatch}) => {
     const emailRef = useRef()
     const passwordRef = useRef()
 
-  
-
     const handleSubmit = e => {
         e.preventDefault()
         console.log("submitted")
-        const email = emailRef.current.value
-        const password = passwordRef.current.value
+        const email = emailRef.current.getValue()
+        const password = passwordRef.current.getValue()
+        console.log(email, password)
         if (email === 'test' && password === 'test') {
             dispatch({type:'LOGIN'})
             navigate('/', { replace: false })
         } else {
+            emailRef.current.error()
             console.log("BAD")
         }
     }
@@ -35,14 +36,14 @@ const Login = ({state, dispatch}) => {
                         <form className="login-form" onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <div className="label">Email</div>
-                                <input ref={emailRef} type="text" id="email" name="email" />
+                                <LoginInput ref={emailRef} type="text" id="email" name="email"/>
                             </div>
                             <div className="form-group">
                                 <div className="label-group">
                                     <div className="label">Password</div>
                                     <span className="forgot-pw">Forgot your password?</span>
                                 </div>
-                                <input ref={passwordRef} type="password" id="password" name="password" autoComplete="off" />
+                                <LoginInput ref={passwordRef} type="password" id="password" name="password" autoComplete="off"/>
                             </div>
                             <button className="login-btn">Sign-In</button>
                             <div className="check-group">

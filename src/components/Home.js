@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState} from "react"
+import { useEffect, useRef, useState} from "react"
 import { useDispatch, useSelector } from "react-redux"
 import useDebounce from "../hooks/useDebounce"
 import { fetchMovies } from "../redux/actions/dataActions"

@@ -1,5 +1,7 @@
 import { memo } from "react";
 
+const areEqual = (prevProps, nextProps) => true;
+
 const SideBar = ({ data, checkHandler }) => {
     return (
         <>
@@ -17,4 +19,4 @@ const SideBar = ({ data, checkHandler }) => {
     )
 }
 
-export default memo(SideBar)
+export default memo(SideBar, areEqual)
